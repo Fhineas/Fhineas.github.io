@@ -21,7 +21,7 @@
     <link href="/2020/my-plan/"/>
     <url>/2020/my-plan/</url>
     
-    <content type="html"><![CDATA[<p><img src="../image/space.jpg" srcset="/img/loading.gif" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<p><img src="../image/space.jpg" srcset="/img/loading.gif" alt=""></p><p>above is a picture</p>]]></content>
     
     
     
