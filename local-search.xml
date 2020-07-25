@@ -8,7 +8,7 @@
     <link href="/2020/test1/"/>
     <url>/2020/test1/</url>
     
-    <content type="html"><![CDATA[<p>test picture<br><img src="/.com//space.jpg" srcset="/img/loading.gif" alt="space"></p><pre><code class="hljs clojure">&#123;% img [class names] test1/space.jpg [<span class="hljs-number">50</span>] [] '<span class="hljs-string">"title text"</span> <span class="hljs-string">"alt text"</span>' %&#125;</code></pre><img class="[class names] test1&#x2F;space.jpg [50] [] &quot;title text&quot; &quot;alt text&quot;">]]></content>
+    <content type="html"><![CDATA[<p>test picture<br><img src="/.com//img/space.jpg" srcset="/img/loading.gif" alt="space"></p><pre><code class="hljs clojure">&#123;% img [class names] /test1/space.jpg [<span class="hljs-number">50</span>] [] '<span class="hljs-string">"title text"</span> <span class="hljs-string">"alt text"</span>' %&#125;</code></pre><img src="/.com//space.jpg" srcset="/img/loading.gif" class><p><img src="/.com//space.jpg" srcset="/img/loading.gif" alt="img"></p><img src="/.com//space.jpg" srcset="/img/loading.gif" class>]]></content>
     
     
     
