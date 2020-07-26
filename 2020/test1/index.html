@@ -171,7 +171,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      15 字
+      171 字
     </span>
   
 
@@ -181,7 +181,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      3
        分钟
     </span>
   
@@ -214,13 +214,65 @@
             <h1 style="display: none">test1</h1>
             
             <div class="markdown-body" id="post-body">
-              <p>test picture<br><img src="/.com//img/space.jpg" srcset="/img/loading.gif" alt="space"></p>
-<pre><code class="hljs clojure">&#123;% img [class names] /test1/space.jpg [<span class="hljs-number">50</span>] [] '<span class="hljs-string">"title text"</span> <span class="hljs-string">"alt text"</span>' %&#125;</code></pre>
+              <p>test picture</p>
+<h2 id="本地图片资源，不限制图片尺寸"><a href="#本地图片资源，不限制图片尺寸" class="headerlink" title="本地图片资源，不限制图片尺寸"></a>本地图片资源，不限制图片尺寸</h2><pre><code class="hljs markdown">![<span class="hljs-string">space</span>](<span class="hljs-link">/images/space.jpg</span>)</code></pre>
 
-<img src="/.com//space.jpg" srcset="/img/loading.gif" class>
+<p><img src="/images/space.jpg" srcset="/img/loading.gif" alt="space"></p>
+<pre><code class="hljs applescript">&#123;% img <span class="hljs-built_in">class</span>  /images/<span class="hljs-literal">space</span>.jpg <span class="hljs-number">500</span> <span class="hljs-number">600</span>  %&#125;</code></pre>
 
-<p><img src="/.com//space.jpg" srcset="/img/loading.gif" alt="img"></p>
-<img src="/.com//space.jpg" srcset="/img/loading.gif" class>
+<img src="/images/space.jpg" srcset="/img/loading.gif" class width="500" height="600">
+
+<pre><code class="hljs markdown">![<span class="hljs-string">space</span>](<span class="hljs-link">./test1/space.jpg</span>)</code></pre>
+
+<p><img src="./test1/space.jpg" srcset="/img/loading.gif" alt="space"></p>
+<pre><code class="hljs markdown">![<span class="hljs-string">space</span>](<span class="hljs-link">/test1/space.jpg</span>)</code></pre>
+
+<p><img src="/test1/space.jpg" srcset="/img/loading.gif" alt="space"></p>
+<pre><code class="hljs applescript">&#123;% img <span class="hljs-built_in">class</span>  /test1/<span class="hljs-literal">space</span>.jpg   %&#125;</code></pre>
+
+{% img class  /test1/space.jpg   %}
+
+
+
+<h2 id="网络图片资源，限制图片显示尺寸"><a href="#网络图片资源，限制图片显示尺寸" class="headerlink" title="网络图片资源，限制图片显示尺寸"></a>网络图片资源，限制图片显示尺寸</h2><pre><code class="hljs vim">&#123;% img http://www.viemu.<span class="hljs-keyword">com</span>/<span class="hljs-keyword">vi</span>-<span class="hljs-keyword">vim</span>-cheat-sheet.gif  <span class="hljs-keyword">vi</span>-<span class="hljs-keyword">vim</span>-cheat-sheet %&#125;</code></pre>
+
+<img src="http://www.viemu.com/vi-vim-cheat-sheet.gif" srcset="/img/loading.gif" class="" title="vi-vim-cheat-sheet">
+
+
+
+<pre><code class="hljs less">!<span class="hljs-selector-attr">[]</span>(<span class="hljs-attribute">https</span>:<span class="hljs-comment">//upload-images.jianshu.io/upload_images/2133488-751e9dd52398a3f0.png)</span></code></pre>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/2133488-751e9dd52398a3f0.png" srcset="/img/loading.gif" alt=""></p>
+<pre><code class="hljs awk">&#123;% img https:<span class="hljs-regexp">//u</span>pload-images.jianshu.io<span class="hljs-regexp">/upload_images/</span><span class="hljs-number">2133488</span>-<span class="hljs-number">751</span>e9dd52398a3f0.png git %&#125;</code></pre>
+
+<img src="https://upload-images.jianshu.io/upload_images/2133488-751e9dd52398a3f0.png" srcset="/img/loading.gif" class="" title="git">
+
+<pre><code class="hljs awk">&#123;% img https:<span class="hljs-regexp">//</span>pic1.zhimg.com<span class="hljs-regexp">/80/</span>v2-<span class="hljs-number">32</span>ab30d0d28b916a204c03de4ed0fc4f_1440w.jpg %&#125;</code></pre>
+
+{% img https://pic1.zhimg.com/80/v2-32ab30d0d28b916a204c03de4ed0fc4f_1440w.jpg %}
+
+<pre><code class="hljs less">!<span class="hljs-selector-attr">[]</span>(<span class="hljs-attribute">http</span>:<span class="hljs-comment">//www.viemu.com/vi-vim-cheat-sheet.gif)</span></code></pre>
+
+<p><img src="http://www.viemu.com/vi-vim-cheat-sheet.gif" srcset="/img/loading.gif" alt=""></p>
+<hr>
+<h2 id="link"><a href="#link" class="headerlink" title="link"></a>link</h2><pre><code class="hljs clojure">&#123;% link text url [external] [title] %&#125;</code></pre>
+
+{%  link  baidu https://www.baidu.com 你好 %}
+
+<pre><code class="hljs ebnf"><span class="hljs-attribute">hhh</span></code></pre>
+
+<a href="https://www.baidu.com/" title="" target="">baidu</a>
+
+
+
+<pre><code class="hljs markdown">[<span class="hljs-string">baidu</span>](<span class="hljs-link">www.baidu.com</span>)</code></pre>
+
+<p><a href="https://www.baidu.com" target="_blank" rel="noopener">baidu</a></p>
+<pre><code class="hljs clojure">&#123;% link 百度一下 http://www.baidu.com [external] [超链接] %&#125;</code></pre>
+
+<a href="http://www.baidu.com/" title="[external] [超链接]" target="">百度一下</a>
+
+
             </div>
             <hr>
             <div>
