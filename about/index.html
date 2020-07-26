@@ -17,7 +17,7 @@
   <meta name="description" content="WELCOME TO MY BLOG">
   <meta name="author" content="Phineas Flynn">
   <meta name="keywords" content="share">
-  <title>test1 - Phineas&#39;s Blog</title>
+  <title>关于 - Phineas&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -53,7 +53,7 @@
 
 
 <body>
-  <header style="height: 70vh;">
+  <header style="height: 60vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -157,40 +157,6 @@
             </span>
 
             
-              
-  <div class="mt-3 post-meta">
-    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-07-25 18:02" pubdate>
-      2020年7月25日 晚上
-    </time>
-  </div>
-
-
-<div class="mt-1">
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-chart"></i>
-      165 字
-    </span>
-  
-
-  
-    
-    <span class="post-meta mr-2">
-      <i class="iconfont icon-clock-fill"></i>
-      
-      
-      2
-       分钟
-    </span>
-  
-
-  
-  
-</div>
-
-            
           </div>
 
           
@@ -201,125 +167,74 @@
 
   <main>
     
+      <div class="container nopadding-md">
+        <div class="py-5" id="board"
+          >
+          
+            <div class="about-avatar">
+              <img src="/img/avatar.png" srcset="/img/loading.gif"
+                   class="img-fluid" alt="avatar">
+            </div>
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+<div class="text-center">
+  <div class="about-info">
+    <div class="about-name">myname</div>
+    <div class="about-intro">一句简短的介绍</div>
+    <div class="about-icons">
       
-
-<div class="container-fluid">
-  <div class="row">
-    <div class="d-none d-lg-block col-lg-2"></div>
-    <div class="col-lg-8 nopadding-md">
-      <div class="container nopadding-md" id="board-ctn">
-        <div class="py-5" id="board">
-          <article class="post-content mx-auto" id="post">
-            <!-- SEO header -->
-            <h1 style="display: none">test1</h1>
-            
-            <div class="markdown-body" id="post-body">
-              <p>test picture</p>
-<h2 id="本地图片资源，不限制图片尺寸"><a href="#本地图片资源，不限制图片尺寸" class="headerlink" title="本地图片资源，不限制图片尺寸"></a>本地图片资源，不限制图片尺寸</h2><pre><code class="hljs markdown">![<span class="hljs-string">space</span>](<span class="hljs-link">/images/space.jpg</span>)</code></pre>
-
-<p><img src="/images/space.jpg" srcset="/img/loading.gif" alt="space"></p>
-<pre><code class="hljs applescript">&#123;% img <span class="hljs-built_in">class</span>  /images/<span class="hljs-literal">space</span>.jpg <span class="hljs-number">500</span> <span class="hljs-number">600</span>  %&#125;</code></pre>
-
-<img src="/images/space.jpg" srcset="/img/loading.gif" class width="500" height="600">
-
-
-
-<h2 id="网络图片资源，限制图片显示尺寸"><a href="#网络图片资源，限制图片显示尺寸" class="headerlink" title="网络图片资源，限制图片显示尺寸"></a>网络图片资源，限制图片显示尺寸</h2><pre><code class="hljs vim">&#123;% img http://www.viemu.<span class="hljs-keyword">com</span>/<span class="hljs-keyword">vi</span>-<span class="hljs-keyword">vim</span>-cheat-sheet.gif  <span class="hljs-keyword">vi</span>-<span class="hljs-keyword">vim</span>-cheat-sheet %&#125;</code></pre>
-
-{% img http://www.viemu.com/vi-vim-cheat-sheet.gif  vi-vim-cheat-sheet %}
-
-
-
-<pre><code class="hljs less">!<span class="hljs-selector-attr">[]</span>(<span class="hljs-attribute">https</span>:<span class="hljs-comment">//upload-images.jianshu.io/upload_images/2133488-751e9dd52398a3f0.png)</span></code></pre>
-
-<p><img src="https://upload-images.jianshu.io/upload_images/2133488-751e9dd52398a3f0.png" srcset="/img/loading.gif" alt=""></p>
-<pre><code class="hljs awk">&#123;% img https:<span class="hljs-regexp">//u</span>pload-images.jianshu.io<span class="hljs-regexp">/upload_images/</span><span class="hljs-number">2133488</span>-<span class="hljs-number">751</span>e9dd52398a3f0.png git %&#125;</code></pre>
-
-{% img https://upload-images.jianshu.io/upload_images/2133488-751e9dd52398a3f0.png git %}
-
-<pre><code class="hljs awk">&#123;% img https:<span class="hljs-regexp">//</span>pic1.zhimg.com<span class="hljs-regexp">/80/</span>v2-<span class="hljs-number">32</span>ab30d0d28b916a204c03de4ed0fc4f_1440w.jpg %&#125;</code></pre>
-
-<img src="https://pic1.zhimg.com/80/v2-32ab30d0d28b916a204c03de4ed0fc4f_1440w.jpg" srcset="/img/loading.gif" class="">
-
-<pre><code class="hljs less">!<span class="hljs-selector-attr">[]</span>(<span class="hljs-attribute">http</span>:<span class="hljs-comment">//www.viemu.com/vi-vim-cheat-sheet.gif)</span></code></pre>
-
-<p><img src="http://www.viemu.com/vi-vim-cheat-sheet.gif" srcset="/img/loading.gif" alt=""></p>
-<hr>
-<h2 id="link"><a href="#link" class="headerlink" title="link"></a>link</h2><pre><code class="hljs clojure">&#123;% link text url [external] [title] %&#125;</code></pre>
-
-<a href="https://www.baidu.com/" title="你好" target="">baidu</a>
-
-<pre><code class="hljs ebnf"><span class="hljs-attribute">hhh</span></code></pre>
-
-{%  link baidu https://www.baidu.comm?  %}
-
-
-
-<pre><code class="hljs markdown">[<span class="hljs-string">baidu</span>](<span class="hljs-link">www.baidu.com</span>)</code></pre>
-
-<p><a href="https://www.baidu.com" target="_blank" rel="noopener">baidu</a></p>
-<pre><code class="hljs clojure">&#123;% link 百度一下 http://www.baidu.com [external] [超链接] %&#125;</code></pre>
-
-<a href="http://www.baidu.com/" title="[external] [超链接]" target="">百度一下</a>
-
-
-            </div>
-            <hr>
-            <div>
-              <div class="post-metas mb-3">
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/tags/pic/">pic</a>
-                    
-                  </div>
-                
-              </div>
-              
-                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
-              
-              
-                <div class="post-prevnext row">
-                  <article class="post-prev col-6">
-                    
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/2020/hello-world/">
-                        <span class="hidden-mobile">Hello World</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
+        
+        
+        
+        <a href="https://github.com" class="
+           hint--bottom hint--rounded"
+           aria-label=GitHub
+        >
+          <i class="iconfont icon-github-fill" aria-hidden="true"></i>
+          
+        </a>
+      
+        
+        
+        
+        <a href="https://douban.com" class="
+           hint--bottom hint--rounded"
+           aria-label=豆瓣
+        >
+          <i class="iconfont icon-douban-fill" aria-hidden="true"></i>
+          
+        </a>
+      
+        
+        
+        
+        <a href="javascript:;" class="qr-trigger
+           "
+           
+        >
+          <i class="iconfont icon-wechat-fill" aria-hidden="true"></i>
+          
+            <img class="qr-img" src="/img/favicon.png" srcset="/img/loading.gif" alt="qrcode" />
+          
+        </a>
+      
     </div>
-    
-      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
-        <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
-  <div id="tocbot"></div>
-</div>
-
-      </div>
-    
   </div>
 </div>
+<div class="mt-5 markdown-body">
+  <p>这里写关于页的正文，支持 Markdown, HTML</p>
 
-<!-- Custom -->
+</div>
 
-
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     
   </main>
 
@@ -397,31 +312,6 @@
 
 
 
-  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
-  <script>
-    $(document).ready(function () {
-      var boardCtn = $('#board-ctn');
-      var boardTop = boardCtn.offset().top;
-
-      tocbot.init({
-        tocSelector: '#tocbot',
-        contentSelector: '#post-body',
-        headingSelector: 'h1,h2,h3,h4,h5,h6',
-        linkClass: 'tocbot-link',
-        activeLinkClass: 'tocbot-active-link',
-        listClass: 'tocbot-list',
-        isCollapsedClass: 'tocbot-is-collapsed',
-        collapsibleClass: 'tocbot-is-collapsible',
-        collapseDepth: 0,
-        scrollSmooth: true,
-        headingsOffset: -boardTop
-      });
-      if ($('.toc-list-item').length > 0) {
-        $('#toc').css('visibility', 'visible');
-      }
-    });
-  </script>
-
 
 
   <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
@@ -429,7 +319,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "test1&nbsp;",
+        "关于&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
@@ -472,20 +362,6 @@
   </script>
 
 
-
-  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
-  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-  <script>
-    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
-      function () {
-        var element = document.createElement('a');
-        $(element).attr('data-fancybox', 'images');
-        $(element).attr('href', $(this).attr('src'));
-        $(this).wrap(element);
-      }
-    );
-  </script>
 
 
 
