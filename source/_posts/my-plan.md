@@ -1,5 +1,8 @@
 ---
-title: my plan
-date: 2020-07-24 17:08:49
-tags:
+title: My Plan
+index_img: /img/20/20_31_plan.jpg
+date: 2020-07-27 21:30:40
+excerpt: 我的博客计划
 ---
+
+我的博客计划：暂时每两周一篇(2020-07-27)
