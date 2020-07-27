@@ -57,7 +57,7 @@
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
-       href="/">&nbsp;<strong>Fluid</strong>&nbsp;</a>
+       href="/">&nbsp;<strong>Phineas's Blog</strong>&nbsp;</a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -129,6 +129,18 @@
             </li>
           
         
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
@@ -147,7 +159,7 @@
 </nav>
 
     <div class="banner intro-2" id="background" parallax=true
-         style="background: url('/img/default.png') no-repeat center center;
+         style="background: url('/img/fluid_about.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -172,7 +184,7 @@
           >
           
             <div class="about-avatar">
-              <img src="/img/avatar.png" srcset="/img/loading.gif"
+              <img src="/img/fluid_avatar.png" srcset="/img/loading.gif"
                    class="img-fluid" alt="avatar">
             </div>
           
@@ -183,18 +195,29 @@
 
 <div class="text-center">
   <div class="about-info">
-    <div class="about-name">myname</div>
+    <div class="about-name">Phineas</div>
     <div class="about-intro">一句简短的介绍</div>
     <div class="about-icons">
       
         
         
         
-        <a href="https://github.com" class="
+        <a href="https://github.com/Fhineas" class="
            hint--bottom hint--rounded"
            aria-label=GitHub
         >
           <i class="iconfont icon-github-fill" aria-hidden="true"></i>
+          
+        </a>
+      
+        
+        
+        
+        <a href="https://stackoverflow.com/" class="
+           hint--bottom hint--rounded"
+           aria-label=Stack Overflow
+        >
+          <i class="iconfont icon-stack-overflow-fill" aria-hidden="true"></i>
           
         </a>
       
@@ -209,24 +232,11 @@
           
         </a>
       
-        
-        
-        
-        <a href="javascript:;" class="qr-trigger
-           "
-           
-        >
-          <i class="iconfont icon-wechat-fill" aria-hidden="true"></i>
-          
-            <img class="qr-img" src="/img/favicon.png" srcset="/img/loading.gif" alt="qrcode" />
-          
-        </a>
-      
     </div>
   </div>
 </div>
 <div class="mt-5 markdown-body">
-  <p>这里写关于页的正文，支持 Markdown, HTML</p>
+  <p>About me</p>
 
 </div>
 
@@ -276,19 +286,87 @@
   <div class="text-center py-3">
     <div>
       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
-      <i class="iconfont icon-love"></i>
+      <i class="iconfont icon-code"></i>
       <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
         <span>Fluid</span></a>
     </div>
     
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
 
     
 
     
   </div>
+  
+  <div>
+  <span id="timeDate">载入天数...</span>
+  <span id="times">载入时分秒...</span>
+  <script>
+  var now = new Date();
+  function createtime(){
+      var grt= new Date("07/27/2020 00:00:00");//此处修改你的建站时间或者网站上线时间
+      now.setTime(now.getTime()+250);
+      days = (now - grt ) / 1000 / 60 / 60 / 24;
+      dnum = Math.floor(days);
+      hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
+      hnum = Math.floor(hours);
+      if(String(hnum).length ==1 ){
+          hnum = "0" + hnum;
+      }
+      minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+      mnum = Math.floor(minutes);
+      if(String(mnum).length ==1 ){
+                mnum = "0" + mnum;
+      }
+      seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+      snum = Math.round(seconds);
+      if(String(snum).length ==1 ){
+                snum = "0" + snum;
+      }
+      document.getElementById("timeDate").innerHTML = "本站安全运行&nbsp"+dnum+"&nbsp天";
+      document.getElementById("times").innerHTML = hnum + "&nbsp小时&nbsp" + mnum + "&nbsp分&nbsp" + snum + "&nbsp秒";
+	}
+	setInterval("createtime()",250);
+	</script>
+	</div>
+
 </footer>
 
 <!-- SCRIPTS -->
+<p id="hitokoto">:D 获取中...</p>
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(response => response.json())
+    .then(data => {
+      const hitokoto = document.getElementById('hitokoto')
+      hitokoto.innerText = data.hitokoto
+      })
+      .catch(console.error)
+</script>
+
 <script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
 <script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
 <script  src="/js/debouncer.js" ></script>
@@ -308,6 +386,8 @@
 
 
 
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
 
 
 
@@ -319,7 +399,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "关于&nbsp;",
+        " &nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

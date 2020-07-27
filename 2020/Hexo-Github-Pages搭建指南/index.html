@@ -17,10 +17,20 @@
   <meta name="description" content="WELCOME TO MY BLOG">
   <meta name="author" content="Phineas Flynn">
   <meta name="keywords" content="share">
-  <title>标签 - Phineas&#39;s Blog</title>
+  <title>Hexo+Github-Pages搭建指南 - Phineas&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+  
+
+  
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
@@ -43,7 +53,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -149,7 +159,7 @@
 </nav>
 
     <div class="banner intro-2" id="background" parallax=true
-         style="background: url('/img/fluid_tag.jpg') no-repeat center center;
+         style="background: url('/img/default.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
@@ -157,6 +167,48 @@
             <span class="h2" id="subtitle">
               
             </span>
+
+            
+              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-07-27 20:46" pubdate>
+      2020年7月27日 晚上
+    </time>
+  </div>
+
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      278 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      4
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
 
             
           </div>
@@ -169,24 +221,128 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">Hexo+Github-Pages搭建指南</h1>
+            
+              <p class="note note-info">
                 
+                  本文最后更新于：2020年7月27日 晚上
+                
+              </p>
+            
+            <div class="markdown-body" id="post-body">
+              <h4 id="简略版"><a href="#简略版" class="headerlink" title="简略版"></a>简略版</h4><pre><code class="hljs jboss-cli"><span class="hljs-params">---</span>	<span class="hljs-comment">#安装Nodejs</span>
+node -v	<span class="hljs-comment">#查看node版本</span>
+npm -v	<span class="hljs-comment">#查看npm版本</span>
+npm install -g cnpm <span class="hljs-params">--registry=http</span>:<span class="hljs-string">//registry.npm.taobao.org</span>	<span class="hljs-comment">#安装淘宝的cnpm 管理器</span>
+cnpm -v	<span class="hljs-comment">#查看cnpm版本</span>
+cnpm install -g hexo-cli    <span class="hljs-comment">#安装hexo框架</span>
+hexo -v	<span class="hljs-comment">#查看hexo版本</span>
+mkdir blog	<span class="hljs-comment">#创建blog目录</span>
+<span class="hljs-keyword">cd</span> blog	 <span class="hljs-comment">#进入blog目录</span>
+sudo hexo init 	<span class="hljs-comment">#生成博客 初始化博客</span>
+hexo s	<span class="hljs-comment">#启动本地博客服务</span>
+http:<span class="hljs-string">//localhost</span><span class="hljs-function">:4000</span>/	<span class="hljs-comment">#本地访问地址</span>
+hexo n <span class="hljs-string">"我的第一篇文章"</span> <span class="hljs-comment">#创建新的文章 </span>
+<span class="hljs-comment">#返回blog目录</span>
+hexo clean <span class="hljs-comment">#清理</span>
+hexo g <span class="hljs-comment">#生成</span>
+<span class="hljs-comment">#Github创建一个新的仓库 YourGithubName.github.io</span>
+cnpm install <span class="hljs-params">--save</span> hexo-deployer-git <span class="hljs-comment">#在blog目录下安装git部署插件</span>
+<span class="hljs-params">----</span>
+<span class="hljs-comment">#配置_config.yml </span>
+<span class="hljs-params">-----</span>
+	<span class="hljs-comment"># Deployment</span>
+	<span class="hljs-comment">## Docs: https://hexo.io/docs/deployment.html</span>
+	<span class="hljs-keyword">deploy</span>:
+  		type: git
+ 		repo: https:<span class="hljs-string">//github.com/YourGithubName/YourGithubName.github.io.git</span>
+  		branch: master
+<span class="hljs-params">-----</span>
+hexo d	<span class="hljs-comment">#部署到Github仓库里</span>
+https:<span class="hljs-string">//YourGithubName.github.io/</span>  <span class="hljs-comment">#访问这个地址可以查看博客</span>
 
-<div class="text-center tagcloud">
-  <a href="/tags/LaTex/" style="font-size: 15px; color: #bbe">LaTex</a>
-</div>
+ git clone https:<span class="hljs-string">//github.com/litten/hexo-theme-yilia.git</span> themes/yilia  <span class="hljs-comment">#下载yilia主题到本地</span>
 
-              </div>
+<span class="hljs-comment">#修改hexo根目录下的 _config.yml 文件 ： theme: yilia</span>
+
+hexo c	<span class="hljs-comment">#清理一下</span>
+hexo g	<span class="hljs-comment">#生成</span>
+hexo d	<span class="hljs-comment">#部署到远程Github仓库</span>
+https:<span class="hljs-string">//YourGithubName.github.io/</span>  <span class="hljs-comment">#查看博客</span></code></pre>
+
+
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" target="_blank" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2020/My-Plan/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">My Plan</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/LaTex%E6%B5%8B%E8%AF%95/">
+                        <span class="hidden-mobile">LaTex测试</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+  <div class="col-lg-7 mx-auto nopadding-md">
+    <div class="container custom post-content mx-auto">
+      <img src="https://octodex.github.com/images/jetpacktocat.png" srcset="/img/loading.gif" class="rounded mx-auto d-block mt-5" style="width:150px; height:150px;">
+    </div>
+  </div>
+
+
     
   </main>
 
@@ -334,6 +490,31 @@
 
 
 
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 3,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
 
 
   <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
@@ -341,7 +522,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "标签&nbsp;",
+        "Hexo+Github-Pages搭建指南&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
@@ -356,6 +537,21 @@
 
 
 
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
 
 
   <script  src="/js/local-search.js" ></script>
@@ -369,6 +565,20 @@
   </script>
 
 
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
 
 
 
