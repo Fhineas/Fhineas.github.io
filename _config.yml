@@ -100,6 +100,9 @@ theme: fluid
 ## Docs: https://hexo.io/docs/deployment.html
 
 deploy:
-  type: git
+- type: git
   repo: git@github.com:Fhineas/Fhineas.github.io.git
+  branch: master
+- type: git
+  repo: git@39.97.127.240:/home/git/hexo.git
   branch: master
