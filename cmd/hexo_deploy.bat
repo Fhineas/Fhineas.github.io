@@ -1,6 +1,6 @@
 @echo off
 cd ..
-echo 开始部署
+echo clean-generate-deploy
 hexo clean && hexo g -d
 
 pause

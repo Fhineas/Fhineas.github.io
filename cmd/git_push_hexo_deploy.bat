@@ -1,14 +1,14 @@
 @echo off
 cd ..
-set /p var=请输入提交日志信息：
+set /p var=input commit:
 
 git add .
 git commit -m "%var%"
 git push origin hexo
 
-echo push成功
+echo push success
 
-echo 开始部署
+echo clean-generate-deploy
 hexo clean && hexo g -d 
 
 pause
